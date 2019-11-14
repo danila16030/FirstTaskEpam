@@ -12,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class LoadFiguresActionTest {
-    private static final String FILE_PATH = "src/resource/data/info.txt";
+    private static final String FILE_PATH = "src/test/resource/data/info.txt";
 
     @Test
     public void testLoadFiguresFromFile() throws FileNotFoundException, NotFoundFiguresException,
