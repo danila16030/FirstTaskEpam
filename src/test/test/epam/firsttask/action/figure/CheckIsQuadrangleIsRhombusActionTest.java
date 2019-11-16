@@ -11,7 +11,7 @@ public class CheckIsQuadrangleIsRhombusActionTest {
     @Test
     public void testCheckIsQuadrangleIsRhombus(){
         CheckIsQuadrangleIsRhombusAction checkIsQuadrangleIsRhombusAction=new CheckIsQuadrangleIsRhombusAction();
-        Quadrangle quadrangle = new Quadrangle(new Point(3, 6), new Point(5, 10), new Point(7, 6),
+        Quadrangle quadrangle = new Quadrangle(123,new Point(3, 6), new Point(5, 10), new Point(7, 6),
                 new Point(5, 2));
         boolean actualAnswer=checkIsQuadrangleIsRhombusAction.execute(quadrangle);
         assertTrue(actualAnswer,"Error quadrangle isn't rhombus");

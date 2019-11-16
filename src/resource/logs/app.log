@@ -1,2 +1,0 @@
-11:53:53.883 [main] INFO  epam.firsttask.action.load.LoadFiguresAction - loading figures from src/test/resource/data/info.txt
-11:53:53.893 [main] WARN  epam.firsttask.action.load.LoadFiguresAction - incorrect line in position 3

@@ -17,7 +17,7 @@ public class CircleSquareActionTest {
     @Test(dataProvider = "data")
     public void testFindSquareOfCircle(double radius, double expectedAnswer) {
         CircleSquareAction circleSquareAction = new CircleSquareAction();
-        Circle circle = new Circle(new Point(0, 0), radius);
+        Circle circle = new Circle(123,new Point(0, 0), radius);
         double actualAnswer = circleSquareAction.execute(circle);
         assertEquals(actualAnswer, expectedAnswer, 0.01, "Error in finding square circle");
     }

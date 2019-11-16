@@ -17,7 +17,7 @@ public class CirclePerimeterActionTest {
     @Test(dataProvider = "data")
     public void testFindPerimeterOfCircle(double radius,double expectedAnswer){
         CirclePerimeterAction circlePerimeterAction=new CirclePerimeterAction();
-        Circle circle=new Circle(new Point(0,0),radius);
+        Circle circle=new Circle(123,new Point(0,0),radius);
         double actualAnswer= circlePerimeterAction.execute(circle);
         assertEquals(actualAnswer, expectedAnswer, 0.01, "Error in finding perimeter circle");
     }

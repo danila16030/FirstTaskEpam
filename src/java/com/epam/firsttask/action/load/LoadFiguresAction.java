@@ -9,6 +9,7 @@ import com.epam.firsttask.exception.FileIsEmptyException;
 import com.epam.firsttask.exception.FileNotFoundException;
 import com.epam.firsttask.exception.NotFoundFiguresException;
 import com.epam.firsttask.pattern.SetOfPatterns;
+import com.epam.firsttask.repository.FigureRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -59,7 +60,7 @@ public class LoadFiguresAction {
                 logger.error("list of figures is empty");
                 throw new NotFoundFiguresException("list of figures from file " + filePath + " is empty");
             }
-            return listOfFigures;
+           return listOfFigures;
         }
     }
 

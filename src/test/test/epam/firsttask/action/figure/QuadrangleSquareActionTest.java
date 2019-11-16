@@ -11,7 +11,7 @@ public class QuadrangleSquareActionTest {
     @Test
     public void testFindSquareOfQuadrangle(){
         QuadrangleSquareAction quadrangleSquareAction=new QuadrangleSquareAction();
-        Quadrangle quadrangle=new Quadrangle(new Point(1,2),new Point(1,6),new Point(9,6),
+        Quadrangle quadrangle=new Quadrangle(123,new Point(1,2),new Point(1,6),new Point(9,6),
                 new Point(9,2));
         double actualAnswer=quadrangleSquareAction.execute(quadrangle);
         assertEquals(actualAnswer,32,0.01,"Error in finding square of quadrangle");

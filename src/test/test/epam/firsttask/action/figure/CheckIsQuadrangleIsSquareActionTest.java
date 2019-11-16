@@ -12,7 +12,7 @@ public class CheckIsQuadrangleIsSquareActionTest {
     @Test
     public void testCheckIsQuadrangleIsSquare(){
         CheckIsQuadrangleIsSquareAction checkIsQuadrangleIsSquareAction=new CheckIsQuadrangleIsSquareAction();
-        Quadrangle quadrangle = new Quadrangle(new Point(1, 2), new Point(1, 6), new Point(5, 6),
+        Quadrangle quadrangle = new Quadrangle(123,new Point(1, 2), new Point(1, 6), new Point(5, 6),
                 new Point(5, 2));
         boolean actualAnswer=checkIsQuadrangleIsSquareAction.execute(quadrangle);
         assertTrue(actualAnswer,"Error quadrangle isn't square");

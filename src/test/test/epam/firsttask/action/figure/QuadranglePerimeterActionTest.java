@@ -12,7 +12,7 @@ public class QuadranglePerimeterActionTest {
     @Test
     public void testFindPerimeterOfQuadrangle(){
         QuadranglePerimeterAction quadranglePerimeterAction=new QuadranglePerimeterAction();
-        Quadrangle quadrangle=new Quadrangle(new Point(1,2),new Point(1,6),new Point(9,6),
+        Quadrangle quadrangle=new Quadrangle(123,new Point(1,2),new Point(1,6),new Point(9,6),
                 new Point(9,2));
         double actualAnswer=quadranglePerimeterAction.execute(quadrangle);
         assertEquals(actualAnswer,24,0.01,"Error in finding perimeter of quadrangle");

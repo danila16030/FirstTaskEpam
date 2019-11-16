@@ -1,10 +1,17 @@
 package com.epam.firsttask.entity;
 
-public class Circle implements Figure {
+import com.epam.firsttask.observer.FigureEvent;
+import com.epam.firsttask.observer.FigureObservable;
+import com.epam.firsttask.observer.FigureObserver;
+
+public class Circle implements FigureObservable, Figure {
+    private int id;
     private Point center;
     private double radius;
+    private FigureObserver observer;
 
-    public Circle(final Point center, double radius) {
+    public Circle(int id, Point center, double radius) {
+        this.id = id;
         this.center = center;
         this.radius = radius;
     }
@@ -16,6 +23,7 @@ public class Circle implements Figure {
 
         Circle circle = (Circle) o;
 
+        if (id != circle.id) return false;
         if (Double.compare(circle.radius, radius) != 0) return false;
         return center != null ? center.equals(circle.center) : circle.center == null;
     }
@@ -24,7 +32,8 @@ public class Circle implements Figure {
     public int hashCode() {
         int result;
         long temp;
-        result = center != null ? center.hashCode() : 0;
+        result = id;
+        result = 31 * result + (center != null ? center.hashCode() : 0);
         temp = Double.doubleToLongBits(radius);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
@@ -33,16 +42,54 @@ public class Circle implements Figure {
     @Override
     public String toString() {
         return "Circle{" +
-                "center=" + center +
+                "id=" + id +
+                ", center=" + center +
                 ", radius=" + radius +
                 '}';
+    }
+
+    public void setId(int id) {
+        notifyObserver();
+        this.id = id;
+        notifyObserver();
+    }
+
+    public void setCenter(Point center) {
+        notifyObserver();
+        this.center = center;
+        notifyObserver();
+    }
+
+    public void setRadius(double radius) {
+        notifyObserver();
+        this.radius = radius;
+        notifyObserver();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Point getCenter() {
+        return center;
     }
 
     public double getRadius() {
         return radius;
     }
 
-    public Point getCenter() {
-        return center;
+    @Override
+    public void attach(FigureObserver observer) {
+        this.observer=observer;
+    }
+
+    @Override
+    public void detach(FigureObserver observer) {
+        this.observer=null;
+    }
+
+    @Override
+    public void notifyObserver() {
+        observer.actionPerformed(new FigureEvent(this));
     }
 }
