@@ -1,8 +1,8 @@
 package com.epam.firsttask.entity;
 
-import com.epam.firsttask.observer.FigureEvent;
-import com.epam.firsttask.observer.FigureObservable;
-import com.epam.firsttask.observer.FigureObserver;
+import com.epam.firsttask.observer.repository.FigureEvent;
+import com.epam.firsttask.observer.repository.FigureObservable;
+import com.epam.firsttask.observer.repository.FigureObserver;
 
 public class Point implements Figure, FigureObservable {
     private int id;
@@ -55,21 +55,21 @@ public class Point implements Figure, FigureObservable {
     }
 
     public void setId(int id) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.id = id;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public void setX(double x) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.x = x;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public void setY(double y) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.y = y;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public int getId() {
@@ -95,7 +95,7 @@ public class Point implements Figure, FigureObservable {
     }
 
     @Override
-    public void notifyObserver() {
+    public void notifyRepositoryObserver() {
         observer.actionPerformed(new FigureEvent(this));
     }
 }

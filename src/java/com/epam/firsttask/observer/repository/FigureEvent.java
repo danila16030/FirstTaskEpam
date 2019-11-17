@@ -1,4 +1,4 @@
-package com.epam.firsttask.observer;
+package com.epam.firsttask.observer.repository;
 
 import com.epam.firsttask.entity.Figure;
 

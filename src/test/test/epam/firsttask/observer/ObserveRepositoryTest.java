@@ -2,7 +2,7 @@ package test.epam.firsttask.observer;
 
 import com.epam.firsttask.entity.Figure;
 import com.epam.firsttask.entity.Point;
-import com.epam.firsttask.observer.FigureObserver;
+import com.epam.firsttask.observer.repository.FigureObserver;
 import com.epam.firsttask.repository.FigureRepository;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,7 +18,7 @@ public class ObserveRepositoryTest  {
         FigureRepository figureRepository=new FigureRepository(figureList);
         FigureObserver first = figureRepository;
         figureList.add(point);
-        ((Point) figureRepository.getFigureList().get(0)).attach(figureRepository);
+        figureRepository.attach(first);
         point.setId(85);
         int expectedAnswer=point.getId();
         Assert.assertSame( ((Point) figureList.get(0)).getId(),expectedAnswer,"Error in observe figures in rep");

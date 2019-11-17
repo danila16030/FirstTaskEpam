@@ -1,14 +1,10 @@
 package test.epam.firsttask.action.load;
 
 import com.epam.firsttask.action.load.LoadFiguresAction;
-import com.epam.firsttask.entity.Circle;
 import com.epam.firsttask.entity.Figure;
 import com.epam.firsttask.exception.FileIsEmptyException;
 import com.epam.firsttask.exception.FileNotFoundException;
 import com.epam.firsttask.exception.NotFoundFiguresException;
-import com.epam.firsttask.observer.FigureObserver;
-import com.epam.firsttask.repository.FigureRepository;
-import com.epam.firsttask.specification.figure.FigureIdSpecification;
 import org.testng.annotations.Test;
 
 import java.util.List;

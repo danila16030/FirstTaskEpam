@@ -1,14 +1,18 @@
 package com.epam.firsttask.entity;
 
-import com.epam.firsttask.observer.FigureEvent;
-import com.epam.firsttask.observer.FigureObservable;
-import com.epam.firsttask.observer.FigureObserver;
+import com.epam.firsttask.observer.repository.FigureEvent;
+import com.epam.firsttask.observer.repository.FigureObservable;
+import com.epam.firsttask.observer.repository.FigureObserver;
+import com.epam.firsttask.observer.storage.circle.CircleEvent;
+import com.epam.firsttask.observer.storage.circle.CircleObservable;
+import com.epam.firsttask.observer.storage.circle.CircleObserver;
 
-public class Circle implements FigureObservable, Figure {
+public class Circle implements FigureObservable, CircleObservable, Figure {
     private int id;
     private Point center;
     private double radius;
-    private FigureObserver observer;
+    private FigureObserver figureRepositoryObserver;
+    private CircleObserver circleStorageObserver;
 
     public Circle(int id, Point center, double radius) {
         this.id = id;
@@ -49,21 +53,21 @@ public class Circle implements FigureObservable, Figure {
     }
 
     public void setId(int id) {
-        notifyObserver();
+        notifyStorageObserver();
         this.id = id;
-        notifyObserver();
+        notifyStorageObserver();
     }
 
     public void setCenter(Point center) {
-        notifyObserver();
+        notifyStorageObserver();
         this.center = center;
-        notifyObserver();
+        notifyStorageObserver();
     }
 
     public void setRadius(double radius) {
-        notifyObserver();
+        notifyStorageObserver();
         this.radius = radius;
-        notifyObserver();
+        notifyStorageObserver();
     }
 
     public int getId() {
@@ -80,16 +84,32 @@ public class Circle implements FigureObservable, Figure {
 
     @Override
     public void attach(FigureObserver observer) {
-        this.observer=observer;
+        this.figureRepositoryObserver = observer;
     }
 
     @Override
     public void detach(FigureObserver observer) {
-        this.observer=null;
+        this.figureRepositoryObserver = null;
     }
 
     @Override
-    public void notifyObserver() {
-        observer.actionPerformed(new FigureEvent(this));
+    public void attach(CircleObserver observer) {
+        this.circleStorageObserver = observer;
+    }
+
+    @Override
+    public void detach(CircleObserver observer) {
+        this.circleStorageObserver = null;
+    }
+
+
+    @Override
+    public void notifyRepositoryObserver() {
+        figureRepositoryObserver.actionPerformed(new FigureEvent(this));
+    }
+
+    @Override
+    public void notifyStorageObserver() {
+        circleStorageObserver.actionPerformed(new CircleEvent(this));
     }
 }

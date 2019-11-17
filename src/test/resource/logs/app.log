@@ -19,3 +19,8 @@
 16:21:07.784 [main] WARN  epam.firsttask.action.load.LoadFiguresAction - incorrect line in position 3
 16:34:07.490 [main] INFO  epam.firsttask.action.load.LoadFiguresAction - loading figures from src/test/resource/data/info.txt
 16:34:07.501 [main] WARN  epam.firsttask.action.load.LoadFiguresAction - incorrect line in position 3
+12:23:43.340 [main] INFO  com.epam.firsttask.repository.FigureRepository - add Point{id=0, x=1.0, y=2.0}
+13:07:22.261 [main] INFO  com.epam.firsttask.repository.FigureRepository - remove Point{id=0, x=1.0, y=2.0}
+13:08:05.595 [main] INFO  com.epam.firsttask.repository.FigureRepository - remove Point{id=0, x=1.0, y=2.0}
+13:08:47.783 [main] INFO  com.epam.firsttask.repository.FigureRepository - remove Point{id=0, x=1.0, y=2.0}
+13:29:57.102 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}

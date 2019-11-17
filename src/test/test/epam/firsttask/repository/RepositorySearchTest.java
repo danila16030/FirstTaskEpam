@@ -22,6 +22,6 @@ public class RepositorySearchTest {
         testList = figureRepository.query(new FigureIdSpecification(1, 50));
         int expectedAnswer=2;
         int actualAnswer=testList.size();
-        Assert.assertSame(actualAnswer,expectedAnswer,"Error search inst correct");
+        Assert.assertSame(actualAnswer,expectedAnswer,"Error search  correct");
     }
 }

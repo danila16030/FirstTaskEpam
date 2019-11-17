@@ -12,6 +12,6 @@ public class LineValidationActionTest {
     public void testLineValidation() {
         LineValidationAction lineValidationAction = new LineValidationAction();
         boolean actualAnswer=lineValidationAction.circleComplianceCheck("1 2 3",SetOfPatterns.CIRCLE_PATTERN);
-        Assert.assertSame(actualAnswer,true,"Error in figures are different");
+        Assert.assertSame(actualAnswer,true,"Error  figures are different");
     }
 }

@@ -1,16 +1,20 @@
 package com.epam.firsttask.entity;
 
-import com.epam.firsttask.observer.FigureEvent;
-import com.epam.firsttask.observer.FigureObservable;
-import com.epam.firsttask.observer.FigureObserver;
+import com.epam.firsttask.observer.repository.FigureEvent;
+import com.epam.firsttask.observer.repository.FigureObservable;
+import com.epam.firsttask.observer.repository.FigureObserver;
+import com.epam.firsttask.observer.storage.quadrangle.QuadrangleEvent;
+import com.epam.firsttask.observer.storage.quadrangle.QuadrangleObservable;
+import com.epam.firsttask.observer.storage.quadrangle.QuadrangleObserver;
 
-public class Quadrangle implements FigureObservable, Figure {
+public class Quadrangle implements FigureObservable, QuadrangleObservable, Figure {
     private int id;
     private Point a;
     private Point b;
     private Point c;
     private Point d;
-    private FigureObserver observer;
+    private FigureObserver figureRepositoryObserver;
+    private QuadrangleObserver quadrangleObserver;
 
     public Quadrangle(int id, Point a, Point b, Point c, Point d) {
         this.id = id;
@@ -57,47 +61,63 @@ public class Quadrangle implements FigureObservable, Figure {
 
     @Override
     public void attach(FigureObserver observer) {
-        this.observer = observer;
+        this.figureRepositoryObserver = observer;
     }
 
     @Override
     public void detach(FigureObserver observer) {
-        this.observer = null;
+        this.figureRepositoryObserver = null;
     }
 
     @Override
-    public void notifyObserver() {
-        observer.actionPerformed(new FigureEvent(this));
+    public void notifyRepositoryObserver() {
+        figureRepositoryObserver.actionPerformed(new FigureEvent(this));
+    }
+
+
+    @Override
+    public void attach(QuadrangleObserver observer) {
+        this.quadrangleObserver = observer;
+    }
+
+    @Override
+    public void detach(QuadrangleObserver observer) {
+        this.quadrangleObserver = null;
+    }
+
+    @Override
+    public void notifyStorageObserver() {
+        quadrangleObserver.actionPerformed(new QuadrangleEvent(this));
     }
 
     public void setId(int id) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.id = id;
-        notifyObserver();
+        notifyRepositoryObserver();
 
     }
 
     public void setA(Point a) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.a = a;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public void setB(Point b) {
         this.b = b;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public void setC(Point c) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.c = c;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public void setD(Point d) {
-        notifyObserver();
+        notifyRepositoryObserver();
         this.d = d;
-        notifyObserver();
+        notifyRepositoryObserver();
     }
 
     public int getId() {
@@ -119,4 +139,5 @@ public class Quadrangle implements FigureObservable, Figure {
     public Point getD() {
         return d;
     }
+
 }
