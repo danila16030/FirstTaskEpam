@@ -17,22 +17,22 @@ public class FigureRepositoryAction {
 
     private List<Figure> figureList;
 
-    public void changeFirstPointInQuadrangle(Quadrangle quadrangle,Point point){
-        if(figureList.contains(quadrangle)){
-            int circlePosition= figureList.indexOf(quadrangle);
+    public void changeFirstPointInQuadrangle(Quadrangle quadrangle, Point point) {
+        if (figureList.contains(quadrangle)) {
+            int circlePosition = figureList.indexOf(quadrangle);
             ((Quadrangle) figureList.get(circlePosition)).setA(point);
             logger.info("change radius of " + quadrangle.toString());
-        }else {
+        } else {
             logger.error("cannot find " + quadrangle.toString() + " in repository");
         }
     }
 
-    public void changeCircleRadius(Circle circle,double radius){
-        if(figureList.contains(circle)){
-           int circlePosition= figureList.indexOf(circle);
+    public void changeCircleRadius(Circle circle, double radius) {
+        if (figureList.contains(circle)) {
+            int circlePosition = figureList.indexOf(circle);
             ((Circle) figureList.get(circlePosition)).setRadius(radius);
             logger.info("change radius of " + circle.toString());
-        }else {
+        } else {
             logger.error("cannot find " + circle.toString() + " in repository");
         }
     }

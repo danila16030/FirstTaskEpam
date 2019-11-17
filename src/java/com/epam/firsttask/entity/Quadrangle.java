@@ -14,7 +14,7 @@ public class Quadrangle implements FigureObservable, QuadrangleObservable, Figur
     private Point c;
     private Point d;
     private FigureObserver figureRepositoryObserver;
-    private QuadrangleObserver quadrangleObserver;
+    private QuadrangleObserver quadrangleStorageObserver;
 
     public Quadrangle(int id, Point a, Point b, Point c, Point d) {
         this.id = id;
@@ -71,53 +71,61 @@ public class Quadrangle implements FigureObservable, QuadrangleObservable, Figur
 
     @Override
     public void notifyRepositoryObserver() {
-        figureRepositoryObserver.actionPerformed(new FigureEvent(this));
+        if (figureRepositoryObserver != null) {
+            figureRepositoryObserver.actionPerformed(new FigureEvent(this));
+        }
     }
 
 
     @Override
     public void attach(QuadrangleObserver observer) {
-        this.quadrangleObserver = observer;
+        this.quadrangleStorageObserver = observer;
     }
 
     @Override
     public void detach(QuadrangleObserver observer) {
-        this.quadrangleObserver = null;
+        this.quadrangleStorageObserver = null;
     }
 
     @Override
     public void notifyStorageObserver() {
-        quadrangleObserver.actionPerformed(new QuadrangleEvent(this));
+        if (quadrangleStorageObserver != null) {
+            quadrangleStorageObserver.actionPerformed(new QuadrangleEvent(this));
+        }
     }
 
     public void setId(int id) {
         notifyRepositoryObserver();
         this.id = id;
         notifyRepositoryObserver();
-
     }
 
     public void setA(Point a) {
         notifyRepositoryObserver();
         this.a = a;
         notifyRepositoryObserver();
+        notifyStorageObserver();
     }
 
     public void setB(Point b) {
+        notifyRepositoryObserver();
         this.b = b;
         notifyRepositoryObserver();
+        notifyStorageObserver();
     }
 
     public void setC(Point c) {
         notifyRepositoryObserver();
         this.c = c;
         notifyRepositoryObserver();
+        notifyStorageObserver();
     }
 
     public void setD(Point d) {
         notifyRepositoryObserver();
         this.d = d;
         notifyRepositoryObserver();
+        notifyStorageObserver();
     }
 
     public int getId() {

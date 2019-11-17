@@ -8,17 +8,18 @@ import com.epam.firsttask.observer.storage.quadrangle.QuadrangleObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class QuadrangleStorage implements QuadrangleObserver {
     private static Logger logger = LogManager.getLogger();
     private static QuadrangleStorage quadrangleStorage = new QuadrangleStorage();
-    private Map<Integer, QuadrangleParameter> map;
+    private static Map<Integer, QuadrangleParameter> map=new HashMap<Integer, QuadrangleParameter>();
 
     private QuadrangleStorage() {
     }
 
-    public static QuadrangleStorage getWareHouse() {
+    public static QuadrangleStorage getQuadrangleStorage() {
         return quadrangleStorage;
     }
 
@@ -37,8 +38,13 @@ public class QuadrangleStorage implements QuadrangleObserver {
         }
     }
 
+    public static Map<Integer, QuadrangleParameter> getMap() {
+        return map;
+    }
+
     @Override
     public void actionPerformed(QuadrangleEvent event) {
         update(event.getSource());
+        logger.info("update" + event.getSource().toString());
     }
 }

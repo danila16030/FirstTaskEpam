@@ -9,6 +9,7 @@ public class CircleEvent extends EventObject {
     public CircleEvent(Object source) {
         super(source);
     }
+
     @Override
     public Circle getSource() {
         return (Circle) super.getSource();

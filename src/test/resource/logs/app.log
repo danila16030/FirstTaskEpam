@@ -24,3 +24,8 @@
 13:08:05.595 [main] INFO  com.epam.firsttask.repository.FigureRepository - remove Point{id=0, x=1.0, y=2.0}
 13:08:47.783 [main] INFO  com.epam.firsttask.repository.FigureRepository - remove Point{id=0, x=1.0, y=2.0}
 13:29:57.102 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
+14:05:31.901 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=55, x=1.0, y=2.0}
+14:05:31.903 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
+14:05:53.957 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=55, x=1.0, y=2.0}
+14:05:53.969 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
+14:29:59.922 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}

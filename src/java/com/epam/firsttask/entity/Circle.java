@@ -53,20 +53,22 @@ public class Circle implements FigureObservable, CircleObservable, Figure {
     }
 
     public void setId(int id) {
-        notifyStorageObserver();
+        notifyRepositoryObserver();
         this.id = id;
-        notifyStorageObserver();
+        notifyRepositoryObserver();
     }
 
     public void setCenter(Point center) {
-        notifyStorageObserver();
+        notifyRepositoryObserver();
         this.center = center;
+        notifyRepositoryObserver();
         notifyStorageObserver();
     }
 
     public void setRadius(double radius) {
-        notifyStorageObserver();
+        notifyRepositoryObserver();
         this.radius = radius;
+        notifyRepositoryObserver();
         notifyStorageObserver();
     }
 
@@ -105,11 +107,15 @@ public class Circle implements FigureObservable, CircleObservable, Figure {
 
     @Override
     public void notifyRepositoryObserver() {
-        figureRepositoryObserver.actionPerformed(new FigureEvent(this));
+        if (figureRepositoryObserver != null) {
+            figureRepositoryObserver.actionPerformed(new FigureEvent(this));
+        }
     }
 
     @Override
     public void notifyStorageObserver() {
-        circleStorageObserver.actionPerformed(new CircleEvent(this));
+        if (circleStorageObserver != null) {
+            circleStorageObserver.actionPerformed(new CircleEvent(this));
+        }
     }
 }

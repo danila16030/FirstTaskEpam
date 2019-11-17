@@ -9,36 +9,45 @@ import com.epam.firsttask.observer.storage.circle.CircleObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.SortedMap;
 
 public class CircleStorage implements CircleObserver {
     private static Logger logger = LogManager.getLogger();
     private static CircleStorage circleStorage = new CircleStorage();
-    private Map<Integer, CircleParameter> map;
+    private static Map<Integer, CircleParameter> map=new HashMap<Integer, CircleParameter>();
 
     private CircleStorage() {
     }
 
-    public static CircleStorage getQuadrangleStorage() {
+    public static CircleStorage getCircleStorage() {
         return circleStorage;
     }
-    public void update(Circle circle){
+
+    public void update(Circle circle) {
         CircleParameter circleParameter;
-        CirclePerimeterAction circlePerimeterAction=new CirclePerimeterAction();
-        CircleSquareAction circleSquareAction=new CircleSquareAction();
-        double perimeter=circlePerimeterAction.execute(circle);
-        double square=circleSquareAction.execute(circle);
+        CirclePerimeterAction circlePerimeterAction = new CirclePerimeterAction();
+        CircleSquareAction circleSquareAction = new CircleSquareAction();
+        double perimeter = circlePerimeterAction.execute(circle);
+        double square = circleSquareAction.execute(circle);
+
         if ((circleParameter = map.get(circle.getId())) != null) {
             circleParameter.setSquare(square);
             circleParameter.setPerimeter(perimeter);
         } else {
-            circleParameter = new CircleParameter(perimeter,square);
+            circleParameter = new CircleParameter(perimeter, square);
             map.put(circle.getId(), circleParameter);
         }
     }
 
+    public static Map<Integer, CircleParameter> getMap() {
+        return map;
+    }
+
     @Override
     public void actionPerformed(CircleEvent event) {
-    update(event.getSource());
+        update(event.getSource());
+        logger.info("update" + event.getSource().toString());
     }
 }

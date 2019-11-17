@@ -1,4 +1,4 @@
-package test.epam.firsttask.observer;
+package test.epam.firsttask.observer.reposytori;
 
 import com.epam.firsttask.entity.Figure;
 import com.epam.firsttask.entity.Point;
