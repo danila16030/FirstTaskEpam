@@ -1,6 +1,5 @@
 package com.epam.firsttask.repository;
 
-import com.epam.firsttask.comporator.PointXCoordinateCompare;
 import com.epam.firsttask.entity.Circle;
 import com.epam.firsttask.entity.Figure;
 import com.epam.firsttask.entity.Point;
@@ -8,8 +7,6 @@ import com.epam.firsttask.entity.Quadrangle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class FigureRepositoryAction {

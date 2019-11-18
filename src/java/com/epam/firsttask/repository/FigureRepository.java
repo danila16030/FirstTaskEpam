@@ -24,9 +24,13 @@ public class FigureRepository implements FigureObserver, FigureObservable {
     }
 
     public List<Figure> query(Specification specification) {
-        return figureList.stream()
-                .filter(figure -> specification.specify(figure))
-                .collect(Collectors.toList());
+        List<Figure> tempList = new ArrayList<>();
+        for (Figure figure:figureList){
+            if(specification.specify(figure)){
+                tempList.add(figure);
+            }
+        }
+        return tempList;
     }
 
     public void addFigure(Figure figure) {
