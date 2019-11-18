@@ -29,3 +29,10 @@
 14:05:53.957 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=55, x=1.0, y=2.0}
 14:05:53.969 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
 14:29:59.922 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+07:56:53.055 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+07:57:01.122 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+07:57:53.584 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+07:58:52.811 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+07:59:33.698 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+07:59:37.764 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+08:00:02.793 [main] INFO  epam.firsttask.storage.circle.CircleStorage - updateCircle{id=1, center=Point{id=0, x=5.0, y=55.0}, radius=3.0}

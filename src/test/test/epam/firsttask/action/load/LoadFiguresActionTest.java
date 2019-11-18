@@ -3,7 +3,7 @@ package test.epam.firsttask.action.load;
 import com.epam.firsttask.action.load.LoadFiguresAction;
 import com.epam.firsttask.entity.Figure;
 import com.epam.firsttask.exception.FileIsEmptyException;
-import com.epam.firsttask.exception.FileNotFoundException;
+import com.epam.firsttask.exception.TxtFileNotFoundException;
 import com.epam.firsttask.exception.NotFoundFiguresException;
 import org.testng.annotations.Test;
 
@@ -15,7 +15,7 @@ public class LoadFiguresActionTest {
     private static final String FILE_PATH = "src/test/resource/data/info.txt";
 
     @Test
-    public void testLoadFiguresFromFile() throws FileNotFoundException, NotFoundFiguresException,
+    public void testLoadFiguresFromFile() throws TxtFileNotFoundException, NotFoundFiguresException,
             FileIsEmptyException {
         LoadFiguresAction loadFiguresAction = new LoadFiguresAction();
         List<Figure> testList = loadFiguresAction.loadFiguresFromFile(FILE_PATH);

@@ -11,14 +11,14 @@ import org.testng.annotations.Test;
 
 public class StorageRepositoryTest {
     @Test
-    public void testObserveOfCircle(){
-        Circle circle=new Circle(1,new Point(2,4),3);
-        CircleObserver observer=CircleStorage.getCircleStorage();
+    public void testObserveOfCircle() {
+        Circle circle = new Circle(1, new Point(2, 4), 3);
+        CircleObserver observer = CircleStorage.getCircleStorage();
         circle.attach(observer);
-        circle.setCenter(new Point(5,9));
-        CircleSquareAction circleSquareAction=new CircleSquareAction();
-        double expectedAnswer=circleSquareAction.execute(circle);
-        double actualAnswer =CircleStorage.getMap().get(circle.getId()).getSquare();
-        Assert.assertEquals(actualAnswer,expectedAnswer);
+        circle.setCenter(new Point(5, 9));
+        CircleSquareAction circleSquareAction = new CircleSquareAction();
+        double expectedAnswer = circleSquareAction.execute(circle);
+        double actualAnswer = CircleStorage.getMap().get(circle.getId()).getSquare();
+        Assert.assertEquals(actualAnswer, expectedAnswer);
     }
 }

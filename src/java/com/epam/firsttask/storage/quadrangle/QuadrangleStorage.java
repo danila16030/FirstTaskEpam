@@ -14,7 +14,7 @@ import java.util.Map;
 public class QuadrangleStorage implements QuadrangleObserver {
     private static Logger logger = LogManager.getLogger();
     private static QuadrangleStorage quadrangleStorage = new QuadrangleStorage();
-    private static Map<Integer, QuadrangleParameter> map=new HashMap<Integer, QuadrangleParameter>();
+    private static Map<Integer, QuadrangleParameter> map = new HashMap<Integer, QuadrangleParameter>();
 
     private QuadrangleStorage() {
     }
@@ -29,7 +29,8 @@ public class QuadrangleStorage implements QuadrangleObserver {
         QuadrangleSquareAction quadrangleSquareAction = new QuadrangleSquareAction();
         double square = quadrangleSquareAction.execute(quadrangle);
         double perimeter = quadranglePerimeterAction.execute(quadrangle);
-        if ((quadrangleParameter = map.get(quadrangle.getId())) != null) {
+        if ((map.get(quadrangle.getId())) != null) {
+            quadrangleParameter = map.get(quadrangle.getId());
             quadrangleParameter.setSquare(square);
             quadrangleParameter.setPerimeter(perimeter);
         } else {

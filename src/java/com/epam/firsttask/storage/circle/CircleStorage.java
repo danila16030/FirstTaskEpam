@@ -16,7 +16,7 @@ import java.util.SortedMap;
 public class CircleStorage implements CircleObserver {
     private static Logger logger = LogManager.getLogger();
     private static CircleStorage circleStorage = new CircleStorage();
-    private static Map<Integer, CircleParameter> map=new HashMap<Integer, CircleParameter>();
+    private static Map<Integer, CircleParameter> map = new HashMap<Integer, CircleParameter>();
 
     private CircleStorage() {
     }
@@ -31,8 +31,8 @@ public class CircleStorage implements CircleObserver {
         CircleSquareAction circleSquareAction = new CircleSquareAction();
         double perimeter = circlePerimeterAction.execute(circle);
         double square = circleSquareAction.execute(circle);
-
-        if ((circleParameter = map.get(circle.getId())) != null) {
+        if ((map.get(circle.getId())) != null) {
+            circleParameter = map.get(circle.getId());
             circleParameter.setSquare(square);
             circleParameter.setPerimeter(perimeter);
         } else {

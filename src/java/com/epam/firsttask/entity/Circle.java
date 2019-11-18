@@ -14,7 +14,7 @@ public class Circle implements FigureObservable, CircleObservable, Figure {
     private FigureObserver figureRepositoryObserver;
     private CircleObserver circleStorageObserver;
 
-    public Circle(int id, Point center, double radius) {
+    public Circle(final int id, final Point center, final double radius) {
         this.id = id;
         this.center = center;
         this.radius = radius;

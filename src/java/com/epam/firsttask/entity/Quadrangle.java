@@ -16,7 +16,7 @@ public class Quadrangle implements FigureObservable, QuadrangleObservable, Figur
     private FigureObserver figureRepositoryObserver;
     private QuadrangleObserver quadrangleStorageObserver;
 
-    public Quadrangle(int id, Point a, Point b, Point c, Point d) {
+    public Quadrangle(final int id, final Point a, final Point b, final Point c, final Point d) {
         this.id = id;
         this.a = a;
         this.b = b;

@@ -6,10 +6,9 @@ import com.epam.firsttask.entity.Figure;
 import com.epam.firsttask.entity.Point;
 import com.epam.firsttask.entity.Quadrangle;
 import com.epam.firsttask.exception.FileIsEmptyException;
-import com.epam.firsttask.exception.FileNotFoundException;
+import com.epam.firsttask.exception.TxtFileNotFoundException;
 import com.epam.firsttask.exception.NotFoundFiguresException;
 import com.epam.firsttask.pattern.SetOfPatterns;
-import com.epam.firsttask.repository.FigureRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,13 +27,13 @@ public class LoadFiguresAction {
     private static LineValidationAction lineValidationAction = new LineValidationAction();
 
     public List<Figure> loadFiguresFromFile(String filePath) throws FileIsEmptyException,
-            FileNotFoundException, NotFoundFiguresException {
+            TxtFileNotFoundException, NotFoundFiguresException {
         logger.info("loading figures from " + filePath);
         List<String> listOfLines = new ArrayList<>();
         List<Figure> listOfFigures = new ArrayList<>();
         boolean flag = checkFile(filePath);
         if (flag) {
-            throw new FileNotFoundException("Check file path");
+            throw new TxtFileNotFoundException("Check file path");
         } else {
             Path path = Paths.get(filePath);
             try (Stream<String> stringStream = Files.lines(path)) {
