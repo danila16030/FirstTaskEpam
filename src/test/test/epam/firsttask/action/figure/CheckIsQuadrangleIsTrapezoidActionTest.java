@@ -1,8 +1,8 @@
 package test.epam.firsttask.action.figure;
 
-import com.epam.firsttask.action.figure.CheckIsQuadrangleIsTrapezoidAction;
-import com.epam.firsttask.entity.Point;
-import com.epam.firsttask.entity.Quadrangle;
+import main.com.epam.firsttask.action.figure.CheckIsQuadrangleIsTrapezoidAction;
+import main.com.epam.firsttask.entity.Point;
+import main.com.epam.firsttask.entity.Quadrangle;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;

@@ -1,10 +1,10 @@
 package test.epam.firsttask.action.load;
 
-import com.epam.firsttask.action.load.LoadFiguresAction;
-import com.epam.firsttask.entity.Figure;
-import com.epam.firsttask.exception.FileIsEmptyException;
-import com.epam.firsttask.exception.TxtFileNotFoundException;
-import com.epam.firsttask.exception.NotFoundFiguresException;
+import main.com.epam.firsttask.action.loading.LoadFiguresAction;
+import main.com.epam.firsttask.entity.Figure;
+import main.com.epam.firsttask.exception.FileIsEmptyException;
+import main.com.epam.firsttask.exception.TxtFileNotFoundException;
+import main.com.epam.firsttask.exception.NotFoundFiguresException;
 import org.testng.annotations.Test;
 
 import java.util.List;

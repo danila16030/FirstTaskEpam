@@ -1,8 +1,8 @@
 package test.epam.firsttask.action.figure;
 
-import com.epam.firsttask.action.figure.CircleSquareAction;
-import com.epam.firsttask.entity.Circle;
-import com.epam.firsttask.entity.Point;
+import main.com.epam.firsttask.action.figure.CircleSquareAction;
+import main.com.epam.firsttask.entity.Circle;
+import main.com.epam.firsttask.entity.Point;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

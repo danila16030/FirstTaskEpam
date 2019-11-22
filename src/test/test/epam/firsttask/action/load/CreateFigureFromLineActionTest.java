@@ -1,8 +1,8 @@
 package test.epam.firsttask.action.load;
 
-import com.epam.firsttask.action.load.CreateFigureFromLineAction;
-import com.epam.firsttask.entity.Figure;
-import com.epam.firsttask.entity.Point;
+import main.com.epam.firsttask.action.loading.CreateFigureFromLineAction;
+import main.com.epam.firsttask.entity.Figure;
+import main.com.epam.firsttask.entity.Point;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

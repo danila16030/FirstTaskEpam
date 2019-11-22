@@ -1,7 +1,7 @@
 package test.epam.firsttask.action.load;
 
-import com.epam.firsttask.action.load.LineValidationAction;
-import com.epam.firsttask.pattern.SetOfPatterns;
+import main.com.epam.firsttask.action.loading.LineValidationAction;
+import main.com.epam.firsttask.pattern.SetOfPatterns;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

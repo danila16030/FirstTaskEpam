@@ -1,8 +1,8 @@
 package test.epam.firsttask.repository;
 
-import com.epam.firsttask.entity.Figure;
-import com.epam.firsttask.entity.Point;
-import com.epam.firsttask.repository.FigureRepository;
+import main.com.epam.firsttask.entity.Figure;
+import main.com.epam.firsttask.entity.Point;
+import main.com.epam.firsttask.repository.FigureRepository;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
