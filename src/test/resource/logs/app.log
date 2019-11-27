@@ -61,3 +61,14 @@
 14:57:45.770 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Circle{id=55, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
 14:57:56.913 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Circle{id=85, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
 14:59:11.840 [main] INFO  epam.firsttask.registrar.circle.CircleParameterRegistrar - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+06:40:56.805 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Circle{id=55, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
+06:41:48.685 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Circle{id=85, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
+06:42:43.053 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Circle{id=55, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
+06:42:57.756 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Circle{id=85, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
+06:43:44.864 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Circle{id=120, center=Point{id=0, x=1.0, y=2.0}, radius=2.0}
+06:45:01.281 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=1.0, y=2.0}
+06:45:24.890 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
+06:45:24.892 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=120, x=1.0, y=2.0}
+06:46:04.550 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=1.0, y=2.0}
+06:46:21.722 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=9, x=1.0, y=2.0}
+06:46:21.724 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=9, x=1.0, y=2.0}

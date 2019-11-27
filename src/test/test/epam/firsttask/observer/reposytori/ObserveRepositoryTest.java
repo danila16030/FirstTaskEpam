@@ -17,13 +17,14 @@ public class ObserveRepositoryTest {
     @Test
     public void testObserver() {
         List<Figure> figureList = new ArrayList<>();
-        Circle circle = new Circle(55, new Point(1,2), 2);
+        Point point = new Point(9,1,2);
         FigureRepository figureRepository = new FigureRepository(figureList);
         Observer<FigureEvent> first = figureRepository;
-        figureList.add(circle);
+        figureList.add(point);
         figureRepository.attach(first);
-        circle.setId(85);
-        int expectedAnswer = circle.getId();
+        point.setId(85);
+        point.setId(120);
+        int expectedAnswer = point.getId();
         Assert.assertSame(( figureList.get(0)).getId(), expectedAnswer, "Error in observe figures in rep");
     }
 }
