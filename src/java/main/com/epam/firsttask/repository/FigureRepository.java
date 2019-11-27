@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FigureRepository implements Observer<FigureEvent>, Observable {
-    private List<Figure> figureList = new ArrayList<>();
+    private List<Figure> figureList = new ArrayList<Figure>();
     private static Logger logger = LogManager.getLogger();
 
     public FigureRepository(List<Figure> figureList) {

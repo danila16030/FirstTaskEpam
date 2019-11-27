@@ -17,6 +17,7 @@ public class ParameterRegistrarTest {
         Observer<CircleEvent> observer = CircleParameterRegistrar.getCircleStorage();
         circle.attach(observer);
         circle.setCenter(new Point(5, 9));
+        circle.setId(25);
         CircleSquareAction circleSquareAction = new CircleSquareAction();
         double expectedAnswer = circleSquareAction.execute(circle);
         double actualAnswer = CircleParameterRegistrar.getMap().get(circle.getId()).getSquare();

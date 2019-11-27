@@ -72,3 +72,26 @@
 06:46:04.550 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=1.0, y=2.0}
 06:46:21.722 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=9, x=1.0, y=2.0}
 06:46:21.724 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=9, x=1.0, y=2.0}
+08:10:58.531 [main] INFO  epam.firsttask.registrar.circle.CircleParameterRegistrar - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+08:12:21.455 [main] INFO  epam.firsttask.registrar.circle.CircleParameterRegistrar - updateCircle{id=1, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+08:13:03.963 [main] INFO  epam.firsttask.registrar.circle.CircleParameterRegistrar - updateCircle{id=25, center=Point{id=0, x=5.0, y=9.0}, radius=3.0}
+08:14:12.849 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=1.0, y=2.0}
+08:14:12.850 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=19, x=1.0, y=2.0}
+08:14:43.280 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
+08:14:51.888 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=120, x=1.0, y=2.0}
+08:15:03.381 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=1.0, y=2.0}
+08:15:03.382 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=19, x=1.0, y=2.0}
+08:15:04.599 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=1.0, y=2.0}
+08:15:18.543 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=120, x=1.0, y=2.0}
+08:15:37.707 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=85.0, y=2.0}
+08:15:37.709 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=19, x=120.0, y=2.0}
+08:15:38.260 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=85.0, y=2.0}
+08:16:06.932 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=120, x=120.0, y=2.0}
+08:16:52.026 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=85.0, y=2.0}
+08:16:52.027 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=19, x=120.0, y=2.0}
+08:18:05.379 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=85.0, y=2.0}
+08:18:05.380 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=120, x=120.0, y=2.0}
+08:18:36.856 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=9, x=85.0, y=2.0}
+08:18:36.857 [main] INFO  com.epam.firsttask.repository.FigureRepository - add observer for  Point{id=19, x=120.0, y=2.0}
+08:18:54.702 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=85, x=85.0, y=2.0}
+08:18:54.703 [main] INFO  com.epam.firsttask.repository.FigureRepository - update Point{id=120, x=120.0, y=2.0}

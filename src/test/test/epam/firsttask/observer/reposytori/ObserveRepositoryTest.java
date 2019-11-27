@@ -17,14 +17,15 @@ public class ObserveRepositoryTest {
     @Test
     public void testObserver() {
         List<Figure> figureList = new ArrayList<>();
-        Point point = new Point(9,1,2);
+        Point point = new Point(9, 85, 2);
+        Point point2 = new Point(19, 120, 2);
         FigureRepository figureRepository = new FigureRepository(figureList);
         Observer<FigureEvent> first = figureRepository;
         figureList.add(point);
+        figureList.add(point2);
         figureRepository.attach(first);
         point.setId(85);
-        point.setId(120);
         int expectedAnswer = point.getId();
-        Assert.assertSame(( figureList.get(0)).getId(), expectedAnswer, "Error in observe figures in rep");
+        Assert.assertSame((figureList.get(0)).getId(), expectedAnswer, "Error in observe figures in rep");
     }
 }
